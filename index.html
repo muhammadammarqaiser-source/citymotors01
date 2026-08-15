@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<title>City Motors — Premium Pre-Owned & New Cars</title>
+
+
+
+<meta name="description" content="City Motors — Jhang's trusted showroom for new and pre-owned cars. Browse inventory, book inspections, and talk directly to our team.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+</head>
+
+<body>
+
+<!-- ============ PRELOADER / IGNITION SEQUENCE ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__scene">
+    <svg class="preloader__gauge" viewBox="0 0 200 200">
+      <circle class="gauge-track" cx="100" cy="100" r="86"></circle>
+      <circle class="gauge-fill" cx="100" cy="100" r="86"></circle>
+    </svg>
+    <div class="preloader__mark">
+      <span class="preloader__city">CITY</span>
+      <span class="preloader__motors">MOTORS</span>
+    </div>
+    <div class="preloader__status">IGNITION<span class="dots"><i></i><i></i><i></i></span></div>
+  </div>
+  <div class="garage-door garage-door--top"></div>
+  <div class="garage-door garage-door--bottom"></div>
+</div>
+
+
+
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="siteNav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">
+      <img src="assets/logo.png" alt="City Motor Jhang logo" class="nav__logo">
+      <span class="nav__brandtext">CITY<em>MOTORS</em></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">History</a>
+      <a href="#owner">Owner</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#partners">Partners</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+
+    <div class="nav__actions">
+      <button class="nav__search-toggle" id="searchToggle" aria-label="Search inventory" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.2" y2="16.2"></line></svg>
+      </button>
+      <a href="https://wa.me/923007504520?utm_source=chatgpt.com" class="nav__call">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+        <span>0300&nbsp;7504520</span>
+      </a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+
+
+  <!-- Expanding search bar -->
+  <div class="search-panel" id="searchPanel">
+    <div class="search-panel__inner">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.2" y2="16.2"></line></svg>
+      <input type="text" id="carSearch" placeholder="Search today's stock — try “Civic”, “SUV”, or “under 4500000”">
+      <button id="searchClose" aria-label="Close search">&times;</button>
+    </div>
+    <div class="search-panel__hint">New arrivals added daily — search by make, body type or budget.</div>
+  </div>
+</header>
+
+
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__road">
+    <div class="hero__lane"></div>
+    <div class="hero__lane"></div>
+  </div>
+
+
+  <div class="hero__beam hero__beam--l"></div>
+  <div class="hero__beam hero__beam--r"></div>
+
+
+  <div class="hero__scene" id="heroScene">
+    <div class="hero__video-wrap" id="heroVideoWrap">
+      <video class="hero__video" id="heroVideo" autoplay muted loop playsinline
+             poster="assets/video-poster.jpg">
+        <source src="assets/herovideo01.mp4" type="video/mp4">
+      </video>
+      <div class="hero__video-placeholder" id="heroVideoPlaceholder">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M10 8l6 4-6 4V8z"></path></svg>
+<!--         <span>Your Showroom Car Video Goes Here</span>
+        <small>Drop an MP4 at assets/showroom-video.mp4 — this space auto-fills it in</small> -->
+      </div>
+    </div>
+    <div class="hero__lightcone" id="lightCone"></div>
+  </div>
+
+
+  <div class="hero__copy">
+   <!--  <p class="eyebrow">CM · 01 — JHANG'S TRUSTED SHOWROOM</p> -->
+    <h1 class="hero__title">CITY<span> MOTOR</span><br>JHANG</h1>
+    <p class="hero__sub">New arrivals inspected daily. Every unit on our floor is verified, priced fair, and one phone call away.</p>
+
+    <div class="hero__cta">
+      <a href="#inventory" class="btn btn--primary">View Today's Stock</a>
+      <a href="tel:+923001234567" class="btn btn--ghost">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+        Call the Floor
+      </a>
+    </div>
+
+
+
+    <div class="hero__stats">
+      <div><strong>12+</strong><span>Years Trading</span></div>
+      <div><strong>900+</strong><span>Cars Sold</span></div>
+      <div><strong>4.8/5</strong><span>Buyer Rating</span></div>
+    </div>
+  </div>
+
+
+  <button class="hero__scrollcue" id="scrollCue" aria-label="Scroll down">
+    <span></span> SCROLL
+  </button>
+</section>
+
+
+
+
+
+<!-- ============ ABOUT / HISTORY ============ -->
+<section class="about" id="about">
+  <div class="section-tag">
+    <span class="plate">CM · 02</span><span>OUR HISTORY</span>
+  </div>
+
+
+  <div class="about__grid">
+    <div class="about__copy">
+      <h2>Built on the Showroom Floor,<br>Not a Boardroom.</h2>
+      <p>Welcome to City Motor Jhang, your premier and trusted destination for all your automotive needs. Owned and operated by Amir Shah, our dealership brings over 25 years of proven industry experience to the local market. Whether you are looking for a personal car, a family ride, or commercial transport, we specialize in dealing with all types of vehicles. </p>
+      <p>Backed by decades of expertise and a commitment to customer satisfaction, we ensure that every client finds exactly what they are looking for with confidence and exceptional service.</p>
+
+      <div class="about__timeline">
+        <div class="tl-item"><span class="tl-year">2012</span><span class="tl-text">First lot opens on Chowk Road with 6 cars</span></div>
+        <div class="tl-item"><span class="tl-year">2017</span><span class="tl-text">In-house inspection bay added — every unit checked before sale</span></div>
+        <div class="tl-item"><span class="tl-year">2023</span><span class="tl-text">Showroom relocated to current premises, daily stock updates begin</span></div>
+      </div>
+    </div>
+
+
+    <div class="about__visual">
+      <div class="spec-card spec-card--float">
+        <span class="spec-card__label">SHOWROOM STANDARD</span>
+        <ul>
+          <li><span>Pre-Sale Inspection</span><b>210-Point</b></li>
+          <li><span>Documentation</span><b>Verified &amp; Clear</b></li>
+          <li><span>Price Policy</span><b>Fixed, No Haggle Games</b></li>
+          <li><span>After-Sale Support</span><b>30-Day Check-In</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ OWNER ============ -->
+<section class="owner" id="owner">
+  <div class="section-tag section-tag--light">
+    <span class="plate">CM · 03</span><span>MEET THE OWNER</span>
+  </div>
+
+  <div class="owner__grid">
+    <div class="owner__portrait">
+      <div class="owner__frame">
+        <img src="assets/owner-amir-shah.png" alt="Amir Shah, owner of City Motors, seated at his showroom desk">
+        <span class="owner__badge">Owner &amp; Dealer</span>
+      </div>
+    </div>
+
+
+    <div class="owner__copy">
+      <p class="eyebrow eyebrow--dark">FROM THE DESK OF</p>
+      <h2>Amir Shah</h2>
+      <p class="owner__role">Founder &amp; Head Dealer, City Motors</p>
+      <p>Amir has spent his career on this side of the desk — buying right, inspecting harder, and standing behind every car that leaves the lot. He personally signs off on every unit before it's listed, and still takes calls from the showroom floor himself.</p>
+      <blockquote>“A showroom is only as good as the last car it sold. I'd rather lose a sale than lose that.”</blockquote>
+      <a href="https://wa.me/923007504520?utm_source=chatgpt.com" class="btn btn--dark">Speak to Amir Shah Directly</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ INVENTORY ============ -->
+<section class="inventory" id="inventory">
+  <div class="section-tag">
+    <span class="plate">CM · 04</span><span>TODAY'S INVENTORY</span>
+  </div>
+  <div class="inventory__head">
+    <h2>On the Floor Right Now</h2>
+    <p>Updated daily. Tap any car for the full spec sheet and photo set.</p>
+  </div>
+
+
+  <div class="filters" id="filters">
+    <button class="filter-chip is-active" data-filter="all">All</button>
+    <button class="filter-chip" data-filter="sedan">Sedan</button>
+    <button class="filter-chip" data-filter="suv">SUV</button>
+    <button class="filter-chip" data-filter="hatchback">Hatchback</button>
+  </div>
+
+
+  <div class="car-grid" id="carGrid"></div>
+
+
+  <p class="inventory__empty" id="inventoryEmpty" hidden>No cars match that search right now — try a different make, body type, or budget.</p>
+</section>
+
+
+
+
+<!-- ============ CAR DETAIL MODAL ============ -->
+<div class="modal" id="carModal" aria-hidden="true">
+  <div class="modal__backdrop" id="modalBackdrop"></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" id="modalClose" aria-label="Close details">&times;</button>
+
+
+    <div class="modal__carousel">
+      <div class="modal__track" id="modalTrack"></div>
+      <button class="carousel-arrow carousel-arrow--l" id="modalPrev" aria-label="Previous photo">&#10094;</button>
+      <button class="carousel-arrow carousel-arrow--r" id="modalNext" aria-label="Next photo">&#10095;</button>
+      <div class="modal__dots" id="modalDots"></div>
+    </div>
+
+
+    <div class="modal__info">
+      <div class="modal__headline">
+        <div>
+          <span class="modal__tag" id="modalTag">SEDAN</span>
+          <h3 id="modalTitle">Car Name</h3>
+        </div>
+        <div class="modal__price" id="modalPrice">PKR 0</div>
+      </div>
+
+
+      <div class="modal__specs" id="modalSpecs"></div>
+
+      <p class="modal__desc" id="modalDesc"></p>
+
+      <div class="modal__cta">
+        <a href="tel:+923001234567" class="btn btn--primary">Call About This Car</a>
+        <span class="modal__vin" id="modalVin">VIN — CM-0000</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="section-tag section-tag--light">
+    <span class="plate">CM · 05</span><span>CLIENT REVIEWS</span>
+  </div>
+  <div class="inventory__head">
+    <h2>What the Last Owner Said</h2>
+    <p>Real feedback from buyers who drove off the lot.</p>
+  </div>
+
+  <div class="reviews__stage" id="reviewsStage">
+    <div class="reviews__track" id="reviewsTrack"></div>
+  </div>
+
+  <div class="reviews__controls">
+    <button id="reviewPrev" aria-label="Previous review">&#10094;</button>
+    <div class="reviews__dots" id="reviewDots"></div>
+    <button id="reviewNext" aria-label="Next review">&#10095;</button>
+  </div>
+</section>
+
+
+
+<!-- ============ PARTNERS ============ -->
+<section class="partners" id="partners">
+  <div class="section-tag">
+    <span class="plate">CM · 06</span><span>OUR PARTNERS</span>
+  </div>
+  <div class="inventory__head">
+    <h2>Trusted By, Working With</h2>
+    <p>The names that help us insure, finance, and register every car that leaves this floor.</p>
+  </div>
+
+
+  <div class="partners__grid">
+    <div class="partner-card">
+      <!-- <div class="partner-card__logo">AF</div> -->
+      <img src="C:\Users\AmmarQaisar\Downloads\city-motors\assets\Patner.png"><br>
+      <h3 style="font-size: 20px;" >Qaiser Shah</h3>
+      <p>Financing partner — installment plans arranged on the spot for approved buyers.</p>
+    </div>
+    <div class="partner-card">
+     <!--  <div class="partner-card__logo">SI</div> -->
+     <img src="C:\Users\AmmarQaisar\Downloads\city-motors\assets\patner2.png"><br>
+      <h3 style="font-size: 20px;">Kamal Shah</h3>
+      <p>Vehicle insurance partner — comprehensive cover same day as purchase.</p>
+    </div>
+    <div class="partner-card">
+      <div class="partner-card__logo">PM</div>
+      <h3>Punjab Motor Registration</h3>
+      <p>Registration &amp; transfer partner — paperwork handled without the queue.</p>
+    </div>
+    <div class="partner-card">
+      <div class="partner-card__logo">PA</div>
+      <h3>Prime Auto Parts</h3>
+      <p>Parts &amp; service partner — genuine parts and post-sale servicing.</p>
+    </div>
+  </div>
+  <p class="partners__note">Sample partner details shown — replace with your real logos and partners in index.html.</p>
+</section>
+
+
+
+
+<!-- ============ CONTACT ============ -->
+<footer class="contact" id="contact">
+  <div class="section-tag">
+    <span class="plate">CM · 07</span><span>TALK TO US</span>
+  </div>
+
+
+  <div class="contact__grid">
+    <div class="contact__copy">
+      <h2>We Deal Face to Face<br>— or on the Phone.</h2>
+      <p>No chat bots, no email tag. If you're serious about a car, call the showroom directly or drop your number below and we'll ring you back the same day.</p>
+
+      <div class="contact__lines">
+        <a href="tel:+923001234567" class="contact__line">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+
+          <div><span>Sales — Amir Shah</span><b>0300&nbsp;7504520</b></div>
+        </a>
+        <a href="tel:+923214567890" class="contact__line">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+          <div><span>Showroom Desk</span><b>0312&nbsp;7504520</b></div>
+        </a>
+        <div class="contact__line contact__line--static">
+          <svg viewBox="0 0 24 24"><path d="M12 2C7 2 3 6 3 11c0 6.4 8 11 9 11s9-4.6 9-11c0-5-4-9-9-9zm0 12a4 4 0 110-8 4 4 0 010 8z"/></svg>
+          <div><span>Showroom Floor</span><b>Toba Road Near TCS Office, Jhang Sadar, Punjab, Pakistan</b></div>
+        </div>
+        <div class="contact__line contact__line--static">
+          <svg viewBox="0 0 24 24"><path d="M12 7v5l3.5 3.5M12 22a10 10 0 100-20 10 10 0 000 20z"/></svg>
+          <div><span>Open</span><b>Daily · 10:00 AM – 9:00 PM</b></div>
+        </div>
+      </div>
+    </div>
+
+  <div class="contact__map">
+      <iframe
+        src="https://www.google.com/maps?q=31.266496,72.318369&z=16&output=embed"
+        width="100%" height="100%" style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="City Motors showroom location">
+      </iframe>
+    </div>
+
+
+
+
+   <!--  <form class="contact__form" id="contactForm">
+      <h3>Request a Call Back</h3>
+      <label>Your Name<input type="text" name="name" required placeholder="Full name"></label>
+      <label>Phone Number<input type="tel" name="phone" required placeholder="03XX XXXXXXX"></label>
+      <label>What are you after?<textarea name="message" rows="3" placeholder="e.g. Looking for a 2019+ Civic under 5,000,000"></textarea></label>
+      <button type="submit" class="btn btn--primary btn--block">Request Call Back</button>
+      <p class="contact__note" id="formNote">We only confirm deals by phone or in person on the showroom floor — never online.</p>
+    </form>
+  </div> -->
+
+
+  <div class="contact__bottom">
+    <div class="nav__brand nav__brand--footer">
+      <img src="assets/logo.png" alt="City Motor Jhang logo" class="nav__logo">
+      <span class="nav__brandtext">CITY<em>MOTORS</em></span>
+    </div>
+    <p>&copy; <span id="year"></span> City Motors, Jhang. All cars subject to prior sale.</p>
+    <br><br>
+    <p style="font-size: 12px;"><b> Made by Muhammad Ammar Qaiser  </b></p>
+  </div>
+</footer>
+
+<button class="speedo" id="speedo" aria-label="Scroll to top">
+  <svg viewBox="0 0 100 100">
+    <path class="speedo-track" d="M15 78 A40 40 0 1 1 85 78"></path>
+    <path class="speedo-fill" id="speedoFill" d="M15 78 A40 40 0 1 1 85 78"></path>
+  </svg>
+  <span class="speedo-needle" id="speedoNeedle"></span>
+  <b>&uarr;</b>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
